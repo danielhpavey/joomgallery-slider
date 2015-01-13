@@ -1,0 +1,62 @@
+<extension type="component"
+           version="2.5.0"
+           method="upgrade">
+
+	<name>FullscreenSlideshow</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>December 2014</creationDate>
+	<author>Daniel Pavey</author>
+	<authorEmail>dan@eastdevon.it</authorEmail>
+	<authorUrl>http://www.eastdevonit.co.uk</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.1.0</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Pull images from defined Joomgallery category for display in companion module</description>
+
+    <install> <!-- Runs on install -->
+        <sql>
+        </sql>
+    </install>
+        <uninstall> <!-- Runs on uninstall -->
+        <sql>
+        </sql>
+    </uninstall>
+
+	<update> <!-- Runs on update; New in 2.5 -->
+		<schemas>
+		</schemas>
+	</update>
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>fullscreenslideshow.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+	</files>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>Fullscreen Slideshow</menu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+				to copy FROM in the package to install therefore files copied
+				in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>fullscreenslideshow.php</filename>
+		    <filename>controller.php</filename>
+		    <filename>config.xml</filename>
+			<folder>models</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+
+</extension>

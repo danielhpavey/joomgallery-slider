@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+        <fieldset
+        name="category"
+        label="Settings"
+        description="Settings for Full Screen Slideshow"
+        >
+            <field
+            name="category_id"
+            type="text"
+            label="Joomgallery Category Id"
+            description="Set the Joomgallery Category Id for use in Slideshow"
+            default="0"
+            >
+            </field>
+        </fieldset>
+</config>
