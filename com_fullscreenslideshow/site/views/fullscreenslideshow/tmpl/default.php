@@ -10,8 +10,8 @@ $document = JFactory::getDocument();
 $document->setMimeEncoding('application/json');
  
 // Change the suggested filename.
-JResponse::setHeader('Content-Disposition','attachment;filename="test.json"');
-echo json_encode($this -> images, JSON_FORCE_OBJECT,  128);
+//JResponse::setHeader('Content-Disposition','attachment;filename="test.json"');
+echo json_encode($this -> images, JSON_FORCE_OBJECT);
 
 ob_end_flush();
 ?>

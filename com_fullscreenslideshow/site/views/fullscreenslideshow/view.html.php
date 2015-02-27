@@ -12,7 +12,8 @@ class FullscreenslideshowViewfullscreenslideshow extends JViewLegacy
 	{
 
         $this -> images = $this->get('Image');
-         
+
+
         parent::display($tpl);
 
 	}

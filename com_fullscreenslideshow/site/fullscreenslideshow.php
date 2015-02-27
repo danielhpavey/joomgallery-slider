@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
@@ -11,7 +13,6 @@ $controller = JControllerLegacy::getInstance('FullScreenSlideshow');
 // Perform the Request task
 $input = JFactory::getApplication()->input;
 $controller->execute($input->getCmd('task'));
-
 
 // Redirect if set by the controller
 $controller->redirect();

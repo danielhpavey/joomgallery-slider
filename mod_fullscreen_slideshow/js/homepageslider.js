@@ -2,13 +2,16 @@ var $jq = jQuery.noConflict();
 
 $jq(window).bind("load", function() {
 
-$jq.getJSON( "http://localhost/countrycovers.co.uk/index.php?option=com_fullscreenslideshow&category_id=2&tmpl=component" , function( data ) {
-    var items = [];
+var theurl = $jq('.slides').data( 'path' );
+
+
+$jq.getJSON( theurl + 'index.php?option=com_fullscreenslideshow&category_id=2&tmpl=component',    function( data ) {
+    var items = '';
      $jq.each( data, function( key, val ) {
     var current = key == 0 ? "class=current" : "";
-    items.push( "<li style = 'background-image:url(" + val + ")'" + current +  " > </li>" );
+    items += ( '<li style = "background-image:url(' + val + ')" > </li>' );
   });
-  $jq( ".slides" ).html( items );
+  $jq( ".slides" ).append( items );
 });
 
 });
@@ -25,18 +28,8 @@ function homepageslider(){
     }
     
    
-    /* 
-    if ($current.length ==0) $current = $(".slides li:last-child") ;
-    var $next = $current.next().length ? $current.next() : $('.slides li:first');
-    $current.addClass('last-current')
-    $next.css({opacity:0.0})
-    .addClass('current')
-    .animate({opacity:1.0}, 1000, function() {
-    $current.removeClass('current last-current');
-    });     
-    */
 }
 $jq(function() {
-setInterval("homepageslider()", 8000);
+setInterval("homepageslider()", 9000);
 });
 

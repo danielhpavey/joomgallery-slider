@@ -16,7 +16,7 @@ class FullscreenSlideshowModelFullscreenslideshow extends JModelItem
         
     }
 
-    private function talkToJoomgallery()
+    public function talkToJoomgallery()
     {
 
         $file = JPATH_ROOT. '/components/com_joomgallery/interface.php';
@@ -32,11 +32,14 @@ class FullscreenSlideshowModelFullscreenslideshow extends JModelItem
         $theimages = array();
         $c = 0;
         foreach ($images as $i){
-            $theimages[$c]= JURI::base() . '/images/joomgallery/originals/' . $i->catpath . '/' . $i->imgfilename;
+            $theimages[$c]= JURI::base() . '/images/originals/' . $i->catpath . '/' . $i->imgfilename;
         
             $c ++;
         }
-            
+
+
+        shuffle($theimages);
+                    
         return $theimages;
 
     }
