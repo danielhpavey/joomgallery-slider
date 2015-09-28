@@ -4,15 +4,10 @@ $jq(window).bind("load", function() {
 
 var theurl = $jq('.slides').data( 'path' );
 
-
-$jq.getJSON( theurl + 'index.php?option=com_fullscreenslideshow&category_id=2&tmpl=component',    function( data ) {
-    var items = '';
-     $jq.each( data, function( key, val ) {
-    var current = key == 0 ? "class=current" : "";
-    items += ( '<li style = "background-image:url(' + val + ')" > </li>' );
-  });
-  $jq( ".slides" ).append( items );
+$jq( '.slides li' ).not( '.fish' ).each( function(){
+    $jq( this ).append( '<img src = "' + $jq( this ).data( 'image' ) + '" />' );
 });
+
 
 });
 
@@ -27,9 +22,9 @@ function homepageslider(){
     $current.next().addClass('current');
     }
     
-   
 }
 $jq(function() {
-setInterval("homepageslider()", 9000);
+var interval = $jq('.slides').data( 'interval' );
+setInterval("homepageslider()", interval);
 });
 
