@@ -24,7 +24,9 @@ defined( '_JEXEC' ) or die;
     }
 ?>
 </ul>
-<a href = "#" class = "jg_slide_control" style = "display:none;"  id = "js_prev">Previous</a>
-<a href = "#" class = "jg_slide_control" style = "display:none;" id = "js_next">Next</a>
+<?php if( $controls == 1 ){ ?>
+<a href = "#" class = "jg_slide_control" id = "js_prev">Previous</a>
+<a href = "#" class = "jg_slide_control" id = "js_next">Next</a>
+<?php } ?>
 <div>
 

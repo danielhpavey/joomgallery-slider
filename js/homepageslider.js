@@ -46,10 +46,6 @@ $jq(document).ready(function() {
 
 var controls = $jq('.slides').data( 'controls' );
 
-if ( controls == 1 ){
-    $jq( '.jg_slide_control').css('display', 'initial');
-}
-
 $jq( "#js_next, #js_prev" ).click( function(){
     clearInterval( timer );
     homepageslider( this.id );
