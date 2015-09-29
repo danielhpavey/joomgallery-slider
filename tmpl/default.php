@@ -1,7 +1,13 @@
 <?php
 defined( '_JEXEC' ) or die;
 ?>
-<ul class = "slides" data-interval="<?php echo $sliderspeed;?>" data-path="<?php echo JURI::base(); ?>" style = "width:<?php echo $sliderwidth; ?>; height:<?php echo $sliderheight; ?>">
+<div class = "slidescontainer">
+<ul class = "slides" 
+    data-interval="<?php echo $sliderspeed;?>" 
+    data-path="<?php echo JURI::base(); ?>" 
+    data-auto="<?php echo $autoslide; ?>"
+    data-controls="<?php echo $controls; ?>"
+    style = "width:<?php echo $sliderwidth; ?>; height:<?php echo $sliderheight; ?>">
 <?php
     $c = 0;
     foreach ( $allimages as $i ){
@@ -18,3 +24,7 @@ defined( '_JEXEC' ) or die;
     }
 ?>
 </ul>
+<a href = "#" class = "jg_slide_control" style = "display:none;"  id = "js_prev">Previous</a>
+<a href = "#" class = "jg_slide_control" style = "display:none;" id = "js_next">Next</a>
+<div>
+

@@ -74,6 +74,26 @@
                     description = "Set the slideshow interval in milliseconds"
                     default = "9000"
                     />
+                <field 
+                    name = "autoslide"
+                    type = "radio"
+                    label = "Auto Slide"
+                    description = "Automatically transition slideshow at given interval"
+                    default = "1"
+                    >
+			        <option value = "0">No</option>
+			        <option value = "1">Yes</option>
+			        </field>
+                <field 
+                    name = "controls"
+                    type = "radio"
+                    label = "Display Controls"
+                    description = "Display Control Buttons"
+                    default = "0"
+                    >
+			        <option value = "0">No</option>
+			        <option value = "1">Yes</option>
+			        </field>
 
                 <field
                  name="moduleclass_sfx"

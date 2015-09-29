@@ -21,6 +21,8 @@ $allimages = $image ->getImages();
 $sliderwidth = $params ->get( 'width' );
 $sliderheight = $params ->get( 'height' );
 $sliderspeed = $params ->get( 'slideshowinterval' );
+$autoslide = $params ->get( 'autoslide' );
+$controls = $params ->get( 'controls' );
 
 
 // Load the template
