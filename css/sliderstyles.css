@@ -25,3 +25,16 @@
     height:100%;
     object-fit:cover;
 }
+
+.jg_slide_title, .jg_slide_description{
+    position:absolute;
+    left:0;
+    bottom:0;
+    color:white;
+    background:black;
+}
+
+.jg_slide_title{
+    top:0;
+    bottom:auto;
+}

@@ -48,7 +48,11 @@ class images
         $theimages = array();
         $c = 0;
         foreach ($images as $i){
-            $theimages[$c]= JURI::base() . $imagepath . $i->catpath . '/' . $i->imgfilename;
+            $theimages[$c]=  array( 
+                    'imgpath' => JURI::base() . $imagepath . $i->catpath . '/' . $i->imgfilename 
+                    ,'imgtitle' => $i->imgtitle
+                    ,'imgtext' => $i->imgtext
+                    );
         
             $c ++;
         }

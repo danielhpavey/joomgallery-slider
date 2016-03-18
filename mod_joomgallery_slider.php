@@ -17,12 +17,15 @@ $image = new images();
 $image ->categoryid = $params ->get( 'joomgallery-category' );
 $allimages = $image ->getImages();
 
+
 // Get slider width & height from settings
 $sliderwidth = $params ->get( 'width' );
 $sliderheight = $params ->get( 'height' );
 $sliderspeed = $params ->get( 'slideshowinterval' );
 $autoslide = $params ->get( 'autoslide' );
 $controls = $params ->get( 'controls' );
+$title = $params ->get( 'show-title' );
+$decripton = $params ->get( 'show-description' );
 
 
 // Load the template

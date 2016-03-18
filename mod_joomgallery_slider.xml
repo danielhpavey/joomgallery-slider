@@ -94,6 +94,24 @@
 			        <option value = "0">No</option>
 			        <option value = "1">Yes</option>
 			        </field>
+			     <field
+                    name="show-title"
+                    type="radio"
+                    label="Show Image Title"
+                    default = "0"
+                    description="Show Image Title" >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    </field>
+			     <field
+                    name="show-description"
+                    type="radio"
+                    default = "0"
+                    label="Show Image Description"
+                    description="Show Image Description" >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    </field>
 
                 <field
                  name="moduleclass_sfx"

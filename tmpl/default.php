@@ -13,12 +13,15 @@ defined( '_JEXEC' ) or die;
     foreach ( $allimages as $i ){
         if ( $c == 0){
             echo '<li  class = "current fish">
-                <img src = "' . $i . '" />
-             </li>';
+                <img src = "' . $i['imgpath'] . '" />';
+                echo imageText( $i, $params );
+            echo' </li>';
 
         } else {
         
-        echo '<li data-image = "' . $i . '"></li>';
+            echo '<li data-image = "' . $i['imgpath'] . '">';
+            echo imageText( $i, $params );
+            echo '</li>';
         }
         $c++;
     }
@@ -29,4 +32,24 @@ defined( '_JEXEC' ) or die;
 <a href = "#" class = "jg_slide_control" id = "js_next">Next</a>
 <?php } ?>
 </div>
+
+
+
+<?php 
+    // Litle Function to display or not display image title and description
+    function imageText( $i, $params )
+    {
+        $title = $params ->get( 'show-title' );
+        $description = $params ->get( 'show-description' );
+        $r = '';
+        if( $title == 1 ){
+            $r .= '<span class = "jg_slide_title">' . $i["imgtitle"] . '</span>';
+        }
+        if( $description  == 1 ){
+            $r .='<span class = "jg_slide_description">' . $i["imgtext"] . '</span>';
+        }
+
+        return $r;
+    }
+?>
 
